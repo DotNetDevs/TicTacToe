@@ -21,8 +21,8 @@ namespace TicTacToe.ConsoleApp
             ttt.GameEnded += OnGameEnded;
 
             var random = new Random((int)DateTime.Now.Ticks);
-            var p1Input = new TicTacToeCpuInput((r, c) => ttt[r, c]) { CellType = TicTacToeCellType.Circle };
-            var p2Input = new TicTacToeUserConsoleInput { CellType = TicTacToeCellType.Cross };
+            var p1Input = new TicTacToeCpuInput(TicTacToeCpuDifficulty.Impossible, (r, c) => ttt[r, c]) { CellType = TicTacToeCellType.Circle };
+            var p2Input = new TicTacToeCpuInput(TicTacToeCpuDifficulty.Easy, (r, c) => ttt[r, c]) { CellType = TicTacToeCellType.Cross };//new TicTacToeUserConsoleInput { CellType = TicTacToeCellType.Cross };
             var p1 = new TicTacToePlayer(p1Input);
             var p2 = new TicTacToePlayer(p2Input);
             p2.PlayerWaiting += sender => p2Input.GetInput();

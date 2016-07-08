@@ -44,6 +44,7 @@
     <Compile Include="Classes\TicTacToePlayer.cs" />
     <Compile Include="Enums\GameEndType.cs" />
     <Compile Include="Enums\TicTacToeCellType.cs" />
+    <Compile Include="Enums\TicTacToeCpuDifficulty.cs" />
     <Compile Include="Interfaces\ITicTacToeInput.cs" />
     <Compile Include="Interfaces\ITicTacToeOutput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
