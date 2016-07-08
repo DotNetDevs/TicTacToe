@@ -59,7 +59,7 @@ namespace TicTacToe.WpfApp
             var ttt = new TicTacToe(new TicTacToeWpfOutput(_buttons));
             ttt.GameEnded += OnGameEnded;
 
-            var p1Input = new TicTacToeCpuInput((r, c) => ttt[r, c]) { CellType = TicTacToeCellType.Circle };
+            var p1Input = new TicTacToeCpuInput(TicTacToeCpuDifficulty.Impossible, (r, c) => ttt[r, c]) { CellType = TicTacToeCellType.Circle };
             var p1 = new TicTacToePlayer(p1Input);
             p1.PlayerWaiting += sender => p1Input.GetInput();
 
